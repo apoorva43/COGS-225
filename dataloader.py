@@ -55,8 +55,8 @@ def create_split_loaders(batch_size, seed, transform=transforms.ToTensor(),
                          show_sample=False, extras={}):
 
     dataset = ChestXrayDataset(transform)
-    dataset_size = (int)(len(dataset) / 10)
-    print("Dataset size:", dataset_size)
+    dataset_size = (int)(len(dataset) / 5)
+    #print("Dataset size:", dataset_size)
     all_indices = list(range(dataset_size))
 
     if shuffle:
@@ -90,5 +90,5 @@ def create_split_loaders(batch_size, seed, transform=transforms.ToTensor(),
                             sampler=sample_val, num_workers=num_workers, 
                               pin_memory=pin_memory)
 
-    print(len(train_loader), len(test_loader), len(val_loader), len(batch_size))
+    #print(len(train_loader), len(test_loader), len(val_loader), len(batch_size))
     return (train_loader, val_loader, test_loader)
