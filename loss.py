@@ -18,6 +18,7 @@ class weighted_loss(nn.Module):
 
         return ret
 
+''' Special loss function for the class imbalance problem '''
 class weighted_focal_loss(nn.Module):
     def __init__(self, weight=None):
         super(weighted_focal_loss, self).__init__()
