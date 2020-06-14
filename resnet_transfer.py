@@ -12,10 +12,9 @@ import numpy as np
 import os
 
 class Resnet_18_Transfer(nn.Module):
-
-    def __init__(self, num_classes, fine_tuning=False):
+    def __init__(self, num_classes, fine_tuning = False):
         super(Resnet_18_Transfer, self).__init__()
-        res = torchvision.models.resnet18(pretrained=True)
+        res = torchvision.models.resnet18(pretrained = True)
         for param in res.parameters():
             param.requires_grad = fine_tuning
 

@@ -4,7 +4,7 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable
 import matplotlib
 import matplotlib.pyplot as plt
 
-
+''' Class to test the models '''
 class Test_Model:
     def __init__(self, predicts, targets):
         self.confusion = None
